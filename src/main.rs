@@ -26,7 +26,10 @@ fn main() -> Result<(), std::io::Error> {
     let mut world = World::new();
     world.register::<Velocity>();
     world.register::<Position>();
-    world.insert((Velocity {dx: 1, dy: 0}, Position {x: 0, y: 0}));
+    world.create_entity()
+        .with(Velocity {dx: 1, dy: 0})
+        .with(Position {x: 0, y: 0})
+        .build();
 
     Ok(())
 }
