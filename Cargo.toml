@@ -1,0 +1,14 @@
+[package]
+name = "specs_error"
+version = "0.1.0"
+authors = ["J Pratt <jp10010101010000@gmail.com>"]
+edition = "2018"
+include = ["src/**/*"]
+
+[[bin]]
+name = "specs_error"
+path = "src/main.rs"
+
+[dependencies]
+component_group = "3.0.0"
+specs = { version = "0.17.0", features = ["specs-derive", "shred-derive"] }
